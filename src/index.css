@@ -44,3 +44,16 @@
     --tw-exit-translate-y: initial;
   }
 }
+
+/* Parallax slice sections with fixed backgrounds */
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}

@@ -1,26 +1,42 @@
-import { useState } from 'react'
+import HeroParallax from './components/HeroParallax'
+import ParallaxSlice from './components/ParallaxSlice'
+import BrandsSection from './components/BrandsSection'
+import TeamServices from './components/TeamServices'
+import SocialCTA from './components/SocialCTA'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#03150a]">
+      {/* Jungle Parallax Hero */}
+      <HeroParallax />
+
+      {/* Parallax slice: A Creative Canopy… */}
+      <ParallaxSlice
+        title="A Creative Canopy"
+        copy="Our layered process captures depth, motion, and meaning—so your brand feels alive from roots to canopy."
+        backgroundUrl="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1920&auto=format&fit=crop"
+      />
+
+      {/* Brands */}
+      <BrandsSection />
+
+      {/* Parallax slice: New Life Taking Root… */}
+      <ParallaxSlice
+        title="New Life Taking Root"
+        copy="From first sketch to final launch, we nurture bold ideas into lush experiences."
+        backgroundUrl="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop"
+      />
+
+      {/* Services and Team */}
+      <TeamServices />
+
+      {/* Social + CTA */}
+      <SocialCTA />
+
+      {/* Footer */}
+      <footer className="bg-[#03150a] border-t border-emerald-900/50 py-8 text-center text-emerald-700 text-sm">
+        © {new Date().getFullYear()} PPP Network — Panda Pixel Production
+      </footer>
     </div>
   )
 }
